@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia:wght@500;600;700;800;900&family=Chango:wght@300;400;500;600;700&family=Darumadrop One:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cute Font:wght@500;600;700;800;900&family=Days One:wght@500;600;700;800;900&display=swap');
+
+
+:root {
+    --Days: 'Days One';
+    --Cute: 'Cute Font';
+    --Sofia: 'Sofia';
+    --Daruma: 'Darumadrop One';
+    --Chango: 'Chango';
+    --dark: #3c393d;
+    --exDark: #2b2b2b;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--Chango);
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.4;
+    color: var(--dark);
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    
+}
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+
+/* top bar */
+.navbar {
+    background: rgb(200, 142, 167);
+    padding: 1rem;
+}
+
+.navbar-brand {
+    color: rgb(249, 245, 246);
+    font-size: 3rem;
+    display: inline;
+    text-align: start;
+    text-decoration: none;
+    font-family: var(--Sofia);
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+    opacity: 0.5;
+}
+
+.navbar-nav {
+    padding-block: 1rem;
+    justify-content: center;
+}
+
+.navbar-nav a {
+    text-transform: uppercase;
+    text-align: match-parent;
+    font-family: var(--Daruma);
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    opacity: 0.5;
+}
+
+.navbar-nav b {
+    text-transform: uppercase;
+    text-align: match-parent;
+    font-family: var(--Daruma);
+    letter-spacing: 0.5px;
+    font-weight: 800;
+    color: rgb(100, 56, 67);
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar-nav b:hover {
+    opacity: 1;
+  }
+
+/* merch */
+.merch{
+    background: linear-gradient(rgb(248, 232, 238),rgb(253, 206, 223));
+    padding: 4.5rem 0;
+}
+
+.merch-section{
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.merch-img{
+    position: relative;
+}
+.merch-img span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--exDark);
+    color: white;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.merch-img span:hover{
+    opacity: .7;
+}
+.merch-desc{
+    margin: 0rem 0;
+    padding: 0 1rem;
+    background-color: rgb(246, 245, 242);
+}
+.merch-desc span{
+    font-family: var(--Days);
+    font-weight: 500;
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.merch-desc h2{
+    font-family: var(--Days);
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+}
+.merch-desc p{
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+    opacity: 0.9;
+    padding-bottom: 1.2rem;
+}
+.merch-desc a{
+    font-family: var(--Daruma);
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(100, 56, 67);
+    padding: 0.5rem 1rem;
+    padding-bottom: 1rem;
+    transition: all 0.5s ease;
+}
+.merch-desc a:hover{
+    background: var(--exDark);
+    color: #fff;
+}
+
+
+/* footer */
+footer{
+    background: var(--exDark);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+.social-links a{
+    border: 2px solid #fff;
+    color: rgb(195, 152, 152);
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover{
+    background: rgb(152, 112, 112);
+    color: var(--exDark);
+}
+.footer span{
+    margin-top: 1rem;
+    display: block;
+    font-family: var(--Playfair);
+    letter-spacing: 2px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 540px){
+    .navbar-nav a{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+ 
+    .merch-section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .merch-section{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .about-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .design-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
