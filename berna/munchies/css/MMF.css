@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Rockwell&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia:wght@500;600;700;800;900&family=Chango:wght@300;400;500;600;700&family=Darumadrop One:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Rockwell', serif;
+  --Sofia: 'Sofia';
+  --Daruma: 'Darumadrop One';
+  --Chango: 'Chango';
+  --dark: #3c393d;
+  --exDark: #2b2b2b;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: var(--Chango);
+  box-sizing: border-box;
+}
+
+body{
+  line-height: 1.4;
+  color: var(--dark);
+  background: linear-gradient(rgb(248, 232, 238), rgb(253, 206, 223), rgb(248,232,238));
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+  color: #000;
+}
+
+/* top bar */
+.navbar {
+  background: rgb(200, 142, 167);
+  padding: 1rem;
+}
+
+.navbar-brand {
+  color: rgb(249, 245, 246);
+  font-size: 3rem;
+  display: inline;
+  text-align: start;
+  text-decoration: none;
+  font-family: var(--Sofia);
+  letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+  opacity: 0.5;
+}
+
+.navbar-nav {
+    padding-block: 1rem;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.navbar-nav a {
+    text-transform: uppercase;
+    text-align: match-parent;
+    font-family: var(--Daruma);
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    display: inline-block; /* Ensure it respects margins and paddings */
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+    margin: 0 21px; /* Margin to create space between items */
+}
+
+.navbar-nav b {
+    text-transform: uppercase;
+    text-align: match-parent;
+    font-family: var(--Daruma);
+    letter-spacing: 0.5px;
+    font-weight: 800;
+    color: rgb(100, 56, 67);
+    text-decoration: none;
+    display: inline-block; /* Ensure it respects margins and paddings */
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+    margin: 0 21px; /* Margin to create space between items */
+}
+
+.navbar-nav a {
+    font-weight: 500;
+    color: white;
+}
+
+.navbar-nav b {
+    font-weight: 800;
+    color: rgb(100, 56, 67);
+}
+
+.navbar-nav a:hover,
+.navbar-nav b:hover {
+    opacity: 0.5;
+}
+
+#popular-posts {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+}
+
+#top-contributors {
+    max-width: 300px;
+    max-height: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+}
+
+#top-contributors ul li {
+    padding: 5px 0;
+}
+
+#popular-posts h2, #top-contributors h2 {
+    font-size: 1.2em;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.content {
+    flex: 1;
+}
+
+/* Footer styling */
+footer {
+    background: var(--exDark);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+/* Social links container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+
+/* Individual social link styling */
+.social-links a {
+    border: 2px solid #fff;
+    color: rgb(195, 152, 152);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+
+/* Hover effect for social links */
+.social-links a:hover {
+    background: rgb(152, 112, 112);
+    color: var(--exDark);
+}
+
+/* Footer text styling */
+footer span {
+    margin-top: 1rem;
+    display: block;
+    font-family: var(--Playfair);
+    letter-spacing: 2px;
+}
+
+/* Additional styles for main content and sections */
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center align navigation items */
+}
+
+nav ul li {
+    display: inline; /* Use display: inline to keep items inline and allow margin to work */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Dark text color */
+    font-weight: bold;
+    padding: 10px 15px; /* Add padding to navigation links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav ul li a:hover {
+    color: #f9a8bf; /* Change text color on hover */
+}
+
+/* Main content */
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+main section {
+    flex: 1;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+main section h2 {
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+    color: var(--dark);
+}
+
+/* Posts, Popular Posts, Top Contributors */
+
+#popular-posts,
+#posts,
+#top-contributors {
+    margin-top: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+#popular-posts h2,
+#posts h2,
+#top-contributors h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+/* Individual post styling */
+.post {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.post .post-content {
+    margin-left: 1.5rem;
+}
+
+.post .post-content h3 {
+    margin: 0 0 0.5rem;
+    color: var(--dark);
+}
+
+.post .post-content p {
+    margin: 0;
+    color: #666;
+}
+
+/* Top contributors */
+#top-contributors ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#top-contributors ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Popular Posts */
+#popular-posts ul li {
+    padding: 5px 0;
+    margin-bottom: 0.5rem;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+    color: #2b2b2b;
+}
+
+#popular-posts h2 {
+    font-size: 1.2em;
+}
+
+#posts a {
+    text-decoration: none;
+    color: #8b0a56;
+} 
+
+/* Remove underline from links inside popular posts */
+#popular-posts a {
+    text-decoration: none;
+    color: #8b0a56;
+}
+
+/* Remove underline from links inside popular posts */
+#top-contributors a {
+    color: #8b0a56;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    main section {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .about-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        align-items: center;
+    }
+}
+
